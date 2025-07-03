@@ -1,0 +1,299 @@
+:root {
+    --primary-color: #6a5acd; /* Slate Blue */
+    --secondary-color: #f0e68c; /* Khaki */
+    --background-color: #1a1a1a; /* Dark Background */
+    --text-color: #f4f4f4;
+    --card-bg-color: #2a2a2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.typing-effect {
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #5a4acd;
+}
+
+/* Sections */
+.section {
+    padding: 6rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-direction: column; /* Changed to column for better flow without image */
+}
+
+.about-text {
+    flex: 1;
+    text-align: center; /* Center text when no image */
+}
+
+/* Removed .about-image img styles as image is removed */
+
+/* Projects Section */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    max-width: 400px; /* Added max-width */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: contain; /* Ensures the entire image is visible */
+    background-color: #ffffff; /* White background for consistency */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    margin-bottom: 1.5rem; /* Added margin-bottom */
+}
+
+/* Skills Section */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Increased gap */
+}
+
+.skill-item {
+    background: var(--card-bg-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease; /* Added transition */
+}
+
+.skill-item:hover {
+    background-color: var(--primary-color); /* Added hover effect */
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 4rem; /* Added margin-bottom */
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 4rem; /* Added margin-bottom */
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Socials Section */
+.socials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-item {
+    background: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 calc(33% - 3rem); /* Adjust for 3 columns with gap */
+    max-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.social-item:hover {
+    transform: translateY(-10px);
+}
+
+.social-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-item i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.social-item p {
+    font-size: 1rem;
+    word-wrap: break-word; /* Added for long text like email */
+}
+
+.social-item a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.social-item a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #111;
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
