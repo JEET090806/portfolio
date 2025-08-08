@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "jeetpandya",
+    "site": "jeet-pandya",
     "public": "public",
     "ignore": [
       "firebase.json",
